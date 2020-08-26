@@ -23,6 +23,7 @@
 		303A1B3624F017D2007ED513 /* InterstialAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3524F017D2007ED513 /* InterstialAD.swift */; };
 		303A1B3824F01B81007ED513 /* WebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3724F01B81007ED513 /* WebViewBridge.swift */; };
 		303A1B3A24F023B7007ED513 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3924F023B6007ED513 /* UIApplication+Extension.swift */; };
+		30B2058D24F709C600242CED /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2058C24F709C600242CED /* String+Extension.swift */; };
 		30CD8D2F24F3DA1D00F6F66A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D2E24F3DA1D00F6F66A /* Analytics.swift */; };
 		30CD8D3124F3DA5800F6F66A /* YandexMetricaAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D3024F3DA5800F6F66A /* YandexMetricaAnalytics.swift */; };
 		30CD8D3424F44F6300F6F66A /* CaseRoyaleWebBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D3324F44F6300F6F66A /* CaseRoyaleWebBridge.swift */; };
@@ -53,6 +54,7 @@
 		303A1B3524F017D2007ED513 /* InterstialAD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstialAD.swift; sourceTree = "<group>"; };
 		303A1B3724F01B81007ED513 /* WebViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridge.swift; sourceTree = "<group>"; };
 		303A1B3924F023B6007ED513 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		30B2058C24F709C600242CED /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		30CD8D2E24F3DA1D00F6F66A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		30CD8D3024F3DA5800F6F66A /* YandexMetricaAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMetricaAnalytics.swift; sourceTree = "<group>"; };
 		30CD8D3324F44F6300F6F66A /* CaseRoyaleWebBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRoyaleWebBridge.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				303A1B1C24EEE92C007ED513 /* UIViewController+Alert.swift */,
 				303A1B3924F023B6007ED513 /* UIApplication+Extension.swift */,
+				30B2058C24F709C600242CED /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				303A1B3424F0175A007ED513 /* ADService.swift in Sources */,
 				303A1B1D24EEE92C007ED513 /* UIViewController+Alert.swift in Sources */,
 				303A1B3A24F023B7007ED513 /* UIApplication+Extension.swift in Sources */,
+				30B2058D24F709C600242CED /* String+Extension.swift in Sources */,
 				303A1B3624F017D2007ED513 /* InterstialAD.swift in Sources */,
 				303A1B3824F01B81007ED513 /* WebViewBridge.swift in Sources */,
 				30EF8C5224F07FD200B565FE /* RewardedVideoAD.swift in Sources */,

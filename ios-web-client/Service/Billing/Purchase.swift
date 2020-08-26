@@ -11,76 +11,93 @@ import SwiftyStoreKit
 
 final class Purchase: BillingService {
   
+  var webBridge: WebViewBridge?
+  
+  func setBridge(webBridge: WebViewBridge) {
+    self.webBridge = webBridge
+  }
+  
   func getProducts(productIds: [String]) {
-    SwiftyStoreKit.retrieveProductsInfo(Set<String>(productIds)) { result in
+    SwiftyStoreKit.retrieveProductsInfo(Set<String>(productIds)) { [weak self] result in
       if let product = result.retrievedProducts.first {
         let priceString = product.localizedPrice!
         print("Product: \(product.localizedDescription), price: \(priceString)")
-      }
-      else if let invalidProductId = result.invalidProductIDs.first {
-        print("Invalid product identifier: \(invalidProductId)")
-      }
-      else {
-        print("Error: \(result.error)")
+      } else if result.invalidProductIDs.isEmpty == false {
+        let message = "Invalid product identifiers: \(result.invalidProductIDs)"
+        self?.emitError(message: message)
+      } else {
+        let message = "Error: \(String(describing: result.error))"
+        self?.emitError(message: message)
       }
     }
   }
   
-  func purchase(productID: String, callback: @escaping Delegate<Bool, String?>) {
+  func purchase(productID: String) {
     SwiftyStoreKit.purchaseProduct(productID) { result in
-      self.handlePurchase(result: result, callback: callback)
+      self.handlePurchase(result: result)
     }
   }
   
-  private func handlePurchase(result: PurchaseResult, callback: @escaping Delegate<Bool, String?>) {
+  func onPurchaseHistoryRestored() {
+    SwiftyStoreKit.restorePurchases { [weak self] result in
+      guard result.restoredPurchases.isEmpty else {
+        self?.webBridge?.emitEvent(message: "onPurchaseHistoryRestored")
+        return
+      }
+      
+      self?.emitError(message: "onPurchaseHistoryFailed")
+    }
+  }
+  
+  // MARK: - Private
+  
+  private func handlePurchase(result: PurchaseResult) {
     switch result {
     case .success(let purchase):
       let success = "Purchase Success: \(purchase.productId)"
       print(success)
-      callback(true, success)
+      let joinedParams = (purchase.transaction.transactionIdentifier ?? "") + "|splitter|" + purchase.transaction.transactionState.debugDescription
+      webBridge?.emitEvent(message: "onProductPurchased", joinedParams)
     case .error(let error):
         switch error.code {
         case .unknown:
           let error = "Unknown error. Please contact support"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .clientInvalid:
           let error = "Not allowed to make the payment"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .paymentCancelled:
           let error = "Not allowed to make the payment"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .paymentInvalid:
           let error = "The purchase identifier was invalid"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .paymentNotAllowed:
           let error = "The device is not allowed to make the payment"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .storeProductNotAvailable:
           let error = "The product is not available in the current storefront"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .cloudServicePermissionDenied:
           let error = "Access to cloud service information is not allowed"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .cloudServiceNetworkConnectionFailed:
           let error = "Could not connect to the network"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         case .cloudServiceRevoked:
           let error = "User has revoked permission to use this cloud service"
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         default:
           let error = (error as NSError).localizedDescription
-          print(error)
-          callback(false, error)
+          emitError(message: error)
         }
     }
+  }
+  
+  // MARK: - Private
+  
+  private func emitError(message: String) {
+    print(message)
+    webBridge?.emitEvent(message: "onBillingError", message)
   }
 }

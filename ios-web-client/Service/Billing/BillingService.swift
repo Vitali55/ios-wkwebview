@@ -10,6 +10,8 @@ import Foundation
 
 protocol BillingService {
   
+  func setBridge(webBridge: WebViewBridge)
   func getProducts(productIds: [String])
-  func purchase(productID: String, callback: @escaping Delegate<Bool, String?>)
+  func purchase(productID: String)
+  func onPurchaseHistoryRestored()
 }
