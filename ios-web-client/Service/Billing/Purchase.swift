@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyStoreKit
+import StoreKit
 
 final class Purchase: BillingService {
   
@@ -19,9 +20,8 @@ final class Purchase: BillingService {
   
   func getProducts(productIds: [String]) {
     SwiftyStoreKit.retrieveProductsInfo(Set<String>(productIds)) { [weak self] result in
-      if let product = result.retrievedProducts.first {
-        let priceString = product.localizedPrice!
-        print("Product: \(product.localizedDescription), price: \(priceString)")
+      if result.retrievedProducts.isEmpty == false {
+        self?.handleProducts(products: result.retrievedProducts)
       } else if result.invalidProductIDs.isEmpty == false {
         let message = "Invalid product identifiers: \(result.invalidProductIDs)"
         self?.emitError(message: message)
@@ -94,7 +94,11 @@ final class Purchase: BillingService {
     }
   }
   
-  // MARK: - Private
+  private func handleProducts(products: Set<SKProduct>) {
+    let adoptedProducts = products.map { BillingModel(product: $0) }
+    let data = adoptedProducts.toJson()
+    webBridge?.emitEvent(message: "onGetStoreGoodsProducts", data)
+  }
   
   private func emitError(message: String) {
     print(message)

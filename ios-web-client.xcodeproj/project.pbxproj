@@ -23,6 +23,9 @@
 		303A1B3624F017D2007ED513 /* InterstialAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3524F017D2007ED513 /* InterstialAD.swift */; };
 		303A1B3824F01B81007ED513 /* WebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3724F01B81007ED513 /* WebViewBridge.swift */; };
 		303A1B3A24F023B7007ED513 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3924F023B6007ED513 /* UIApplication+Extension.swift */; };
+		30AF7FD224F904D3008BECA7 /* BillingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF7FD124F904D3008BECA7 /* BillingModel.swift */; };
+		30AF7FD424FCF9EA008BECA7 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF7FD324FCF9EA008BECA7 /* Array+Extension.swift */; };
+		30AF7FD624FCFA0F008BECA7 /* SKProduct+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF7FD524FCFA0F008BECA7 /* SKProduct+Extension.swift */; };
 		30B2058D24F709C600242CED /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2058C24F709C600242CED /* String+Extension.swift */; };
 		30CD8D2F24F3DA1D00F6F66A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D2E24F3DA1D00F6F66A /* Analytics.swift */; };
 		30CD8D3124F3DA5800F6F66A /* YandexMetricaAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D3024F3DA5800F6F66A /* YandexMetricaAnalytics.swift */; };
@@ -54,6 +57,9 @@
 		303A1B3524F017D2007ED513 /* InterstialAD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstialAD.swift; sourceTree = "<group>"; };
 		303A1B3724F01B81007ED513 /* WebViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridge.swift; sourceTree = "<group>"; };
 		303A1B3924F023B6007ED513 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		30AF7FD124F904D3008BECA7 /* BillingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingModel.swift; sourceTree = "<group>"; };
+		30AF7FD324FCF9EA008BECA7 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		30AF7FD524FCFA0F008BECA7 /* SKProduct+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct+Extension.swift"; sourceTree = "<group>"; };
 		30B2058C24F709C600242CED /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		30CD8D2E24F3DA1D00F6F66A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		30CD8D3024F3DA5800F6F66A /* YandexMetricaAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMetricaAnalytics.swift; sourceTree = "<group>"; };
@@ -145,6 +151,8 @@
 				303A1B1C24EEE92C007ED513 /* UIViewController+Alert.swift */,
 				303A1B3924F023B6007ED513 /* UIApplication+Extension.swift */,
 				30B2058C24F709C600242CED /* String+Extension.swift */,
+				30AF7FD324FCF9EA008BECA7 /* Array+Extension.swift */,
+				30AF7FD524FCFA0F008BECA7 /* SKProduct+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -178,6 +186,14 @@
 				303A1B3324F0175A007ED513 /* ADService.swift */,
 			);
 			path = AD;
+			sourceTree = "<group>";
+		};
+		30AF7FD024F904C1008BECA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30AF7FD124F904D3008BECA7 /* BillingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		30CD8D2D24F3DA0100F6F66A /* Analytics */ = {
@@ -246,6 +262,7 @@
 		30EF8C5324F082FB00B565FE /* Billing */ = {
 			isa = PBXGroup;
 			children = (
+				30AF7FD024F904C1008BECA7 /* Model */,
 				303A1B2E24EFDCB3007ED513 /* Purchase.swift */,
 				30EF8C5424F0830E00B565FE /* BillingService.swift */,
 			);
@@ -405,14 +422,17 @@
 				30EF8C5224F07FD200B565FE /* RewardedVideoAD.swift in Sources */,
 				303A1B2324EF0EAB007ED513 /* ReachabilityHandler.swift in Sources */,
 				303A1B0824EE7ABA007ED513 /* MainViewController.swift in Sources */,
+				30AF7FD624FCFA0F008BECA7 /* SKProduct+Extension.swift in Sources */,
 				303A1B0424EE7ABA007ED513 /* AppDelegate.swift in Sources */,
 				303A1B1A24EE7E6C007ED513 /* API.swift in Sources */,
+				30AF7FD224F904D3008BECA7 /* BillingModel.swift in Sources */,
 				303A1B2F24EFDCB4007ED513 /* Purchase.swift in Sources */,
 				30CD8D3424F44F6300F6F66A /* CaseRoyaleWebBridge.swift in Sources */,
 				303A1B2624EF16BB007ED513 /* Reachability.swift in Sources */,
 				30CD8D3124F3DA5800F6F66A /* YandexMetricaAnalytics.swift in Sources */,
 				30EF8C5524F0830E00B565FE /* BillingService.swift in Sources */,
 				303A1B3124EFDDA8007ED513 /* Typealias.swift in Sources */,
+				30AF7FD424FCF9EA008BECA7 /* Array+Extension.swift in Sources */,
 				30CD8D2F24F3DA1D00F6F66A /* Analytics.swift in Sources */,
 				303A1B2524EF0FD8007ED513 /* SetupService.swift in Sources */,
 			);
