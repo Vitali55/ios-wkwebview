@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     setupService.setupNetworkHandler()
     setupService.setupAd()
+    Purchase.finishTransactions()
     
     return true
   }

@@ -26,6 +26,7 @@
 		30AF7FD224F904D3008BECA7 /* BillingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF7FD124F904D3008BECA7 /* BillingModel.swift */; };
 		30AF7FD424FCF9EA008BECA7 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF7FD324FCF9EA008BECA7 /* Array+Extension.swift */; };
 		30AF7FD624FCFA0F008BECA7 /* SKProduct+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF7FD524FCFA0F008BECA7 /* SKProduct+Extension.swift */; };
+		30AF7FD824FD6513008BECA7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AF7FD724FD6513008BECA7 /* StoreKit.framework */; };
 		30B2058D24F709C600242CED /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2058C24F709C600242CED /* String+Extension.swift */; };
 		30CD8D2F24F3DA1D00F6F66A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D2E24F3DA1D00F6F66A /* Analytics.swift */; };
 		30CD8D3124F3DA5800F6F66A /* YandexMetricaAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8D3024F3DA5800F6F66A /* YandexMetricaAnalytics.swift */; };
@@ -39,7 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		303A1B0024EE7ABA007ED513 /* ios-web-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-web-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		303A1B0024EE7ABA007ED513 /* Case Royale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Case Royale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		303A1B0324EE7ABA007ED513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		303A1B0724EE7ABA007ED513 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		303A1B0A24EE7ABA007ED513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		30AF7FD124F904D3008BECA7 /* BillingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingModel.swift; sourceTree = "<group>"; };
 		30AF7FD324FCF9EA008BECA7 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		30AF7FD524FCFA0F008BECA7 /* SKProduct+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct+Extension.swift"; sourceTree = "<group>"; };
+		30AF7FD724FD6513008BECA7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		30B2058C24F709C600242CED /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		30CD8D2E24F3DA1D00F6F66A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		30CD8D3024F3DA5800F6F66A /* YandexMetricaAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexMetricaAnalytics.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC0222D6652720AE8E8457A /* Pods_ios_web_client.framework in Frameworks */,
+				30AF7FD824FD6513008BECA7 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +111,7 @@
 		303A1B0124EE7ABA007ED513 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				303A1B0024EE7ABA007ED513 /* ios-web-client.app */,
+				303A1B0024EE7ABA007ED513 /* Case Royale.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +124,6 @@
 				303A1B1E24EF0E68007ED513 /* Service */,
 				303A1B1824EE7E51007ED513 /* Common */,
 				303A1B1B24EEE916007ED513 /* Extension */,
-				303A1B1124EE7ABC007ED513 /* Info.plist */,
 				30CD8D3524F4614C00F6F66A /* Resources */,
 				303A1B0C24EE7ABC007ED513 /* Assets.xcassets */,
 			);
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				303A1B0324EE7ABA007ED513 /* AppDelegate.swift */,
+				303A1B1124EE7ABC007ED513 /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 		D3B1EFE993EE7949805043C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30AF7FD724FD6513008BECA7 /* StoreKit.framework */,
 				5757EA61F65B958D39AC1C8D /* Pods_ios_web_client.framework */,
 			);
 			name = Frameworks;
@@ -297,7 +301,7 @@
 			);
 			name = "ios-web-client";
 			productName = "ios-web-client";
-			productReference = 303A1B0024EE7ABA007ED513 /* ios-web-client.app */;
+			productReference = 303A1B0024EE7ABA007ED513 /* Case Royale.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -580,14 +584,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2V9D4624VZ;
-				INFOPLIST_FILE = "ios-web-client/Info.plist";
+				DEVELOPMENT_TEAM = 5XYQGZ6A45;
+				INFOPLIST_FILE = "${SRCROOT}/ios-web-client/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "apescodes.test.ios-web-client";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cogscoding.caseroyale;
+				PRODUCT_NAME = "Case Royale";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -600,13 +604,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V9D4624VZ;
-				INFOPLIST_FILE = "ios-web-client/Info.plist";
+				INFOPLIST_FILE = "${SRCROOT}/ios-web-client/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "apescodes.test.ios-web-client";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cogscoding.caseroyale;
+				PRODUCT_NAME = "Case Royale";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

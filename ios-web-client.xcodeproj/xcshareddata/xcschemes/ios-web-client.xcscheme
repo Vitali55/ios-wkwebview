@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "303A1AFF24EE7AB9007ED513"
-               BuildableName = "ios-web-client.app"
+               BuildableName = "Case Royale.app"
                BlueprintName = "ios-web-client"
                ReferencedContainer = "container:ios-web-client.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "303A1AFF24EE7AB9007ED513"
-            BuildableName = "ios-web-client.app"
+            BuildableName = "Case Royale.app"
             BlueprintName = "ios-web-client"
             ReferencedContainer = "container:ios-web-client.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "303A1AFF24EE7AB9007ED513"
-            BuildableName = "ios-web-client.app"
+            BuildableName = "Case Royale.app"
             BlueprintName = "ios-web-client"
             ReferencedContainer = "container:ios-web-client.xcodeproj">
          </BuildableReference>
