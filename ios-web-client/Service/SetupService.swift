@@ -25,11 +25,17 @@ final class SetupService {
     rechabilityObserver.stopMonitoring()
   }
   
+  func setupAll() {
+    setupNetworkHandler()
+    setupAd()
+    setupMetrika()
+  }
+  
   //MARK: - AD
   
   func setupAd() {
     Appodeal.initialize(
-      withApiKey: "dd3215441fc49a6d92c1b250ea7973430ff68ac13bb1bc70",
+      withApiKey: "22ebd2ecccaf7238b2bcc0e62a91602445ecb5851d5aba0a",
       types: [AppodealAdType.interstitial, AppodealAdType.rewardedVideo],
       hasConsent: true
     )
@@ -37,5 +43,11 @@ final class SetupService {
   
   func initAdsAggregator(hasConsent: Bool) {
     Appodeal.updateConsent(hasConsent)
+  }
+  
+  // MARK: - Metrika
+  
+  func setupMetrika() {
+    YandexMetricaAnalytics().initMetrica()
   }
 }
