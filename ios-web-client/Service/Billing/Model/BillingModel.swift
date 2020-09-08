@@ -9,7 +9,7 @@
 import Foundation
 import StoreKit
 
-struct BillingModel {
+struct BillingModel: Codable {
   
   var currency: String
   var description: String
@@ -33,7 +33,7 @@ struct BillingModel {
     currency = product.localizedPrice
     description = product.localizedDescription
     title = product.localizedTitle
-    subscriptionPeriod = product.subscriptionPeriod.debugDescription
+    subscriptionPeriod = product.subscriptionPeriod == nil ? "" : product.subscriptionPeriod.debugDescription
     subscriptionFreeTrialPeriod = product.localizedSubscriptionPeriod
     productId = product.productIdentifier
     introductoryPricePeriod = ""

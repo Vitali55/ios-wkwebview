@@ -18,3 +18,14 @@ extension Array {
     return String(data: data, encoding: String.Encoding.utf8) ?? ""
   }
 }
+
+extension Dictionary {
+  
+  func toJson() -> String {
+    guard let data = try? JSONSerialization.data(withJSONObject: self, options: []) else {
+      return ""
+    }
+    
+    return String(data: data, encoding: String.Encoding.utf8) ?? ""
+  }
+}

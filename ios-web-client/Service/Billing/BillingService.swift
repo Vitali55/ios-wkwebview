@@ -10,6 +10,8 @@ import Foundation
 
 protocol BillingService {
   
+  var receiptData: String { get }
+  
   func setBridge(webBridge: WebViewBridge)
   func getProducts(productIds: [String])
   func purchase(productID: String)

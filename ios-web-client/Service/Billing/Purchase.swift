@@ -18,6 +18,10 @@ final class Purchase: BillingService {
     self.webBridge = webBridge
   }
   
+  var receiptData: String {
+    getReceiptData()
+  }
+  
   func getProducts(productIds: [String]) {
     SwiftyStoreKit.retrieveProductsInfo(Set<String>(productIds)) { [weak self] result in
       if result.retrievedProducts.isEmpty == false {
@@ -73,7 +77,8 @@ final class Purchase: BillingService {
     case .success(let purchase):
       let success = "Purchase Success: \(purchase.productId)"
       print(success)
-      let joinedParams = (purchase.transaction.transactionIdentifier ?? "") + "|splitter|" + purchase.transaction.transactionState.debugDescription
+      let transactionDetails = getTransactionDetails(purchase: purchase)
+      let joinedParams = receiptData + "|splitter|" + transactionDetails
       webBridge?.emitEvent(message: "onProductPurchased", joinedParams)
     case .error(let error):
         switch error.code {
@@ -112,7 +117,7 @@ final class Purchase: BillingService {
   }
   
   private func handleProducts(products: Set<SKProduct>) {
-    let adoptedProducts = products.map { BillingModel(product: $0) }
+    let adoptedProducts = products.map { BillingModel(product: $0).dictionary() }
     let data = adoptedProducts.toJson()
     webBridge?.emitEvent(message: "onGetStoreGoodsProducts", data)
   }
@@ -120,5 +125,31 @@ final class Purchase: BillingService {
   private func emitError(message: String) {
     print(message)
     webBridge?.emitEvent(message: "onBillingError", message)
+  }
+  
+  private func getTransactionDetails(purchase: PurchaseDetails) -> String {
+    [
+      "orderId": purchase.transaction.transactionIdentifier,
+      "productId": purchase.productId
+    ].toJson()
+  }
+  
+  private func getReceiptData() -> String {
+    guard let appStoreReceiptURL = Bundle.main.appStoreReceiptURL,
+      FileManager.default.fileExists(atPath: appStoreReceiptURL.path) else {
+      return ""
+    }
+    
+    do {
+      let receiptData = try Data(contentsOf: appStoreReceiptURL, options: .alwaysMapped)
+      let receiptString = receiptData.base64EncodedString(options: [])
+      
+      return receiptString
+    }
+    catch {
+      print("Couldn't read receipt data with error: " + error.localizedDescription)
+      
+      return ""
+    }
   }
 }

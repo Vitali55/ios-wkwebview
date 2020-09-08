@@ -7,8 +7,10 @@
 //
 
 import StoreKit
+import SwiftyStoreKit
 
 extension SKProduct {
+  
   fileprivate static var formatter: NumberFormatter {
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
@@ -16,17 +18,20 @@ extension SKProduct {
   }
   
   var localizedPrice: String {
-    if self.price == 0.00 {
-      return "None"
-    } else {
-      let formatter = SKProduct.formatter
-      formatter.locale = self.priceLocale
-      
-      guard let formattedPrice = formatter.string(from: self.price) else {
-        return "Unknown Price"
-      }
-      
-      return formattedPrice
+    self.priceLocale.currencyCode ?? ""
+  }
+}
+
+extension Encodable {
+  
+  func dictionary() -> [String: Any]? {
+    let encoder = JSONEncoder()
+    
+    guard let data = try? encoder.encode(self),
+      let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else {
+        return nil
     }
+
+    return jsonObject as? [String: Any]
   }
 }
