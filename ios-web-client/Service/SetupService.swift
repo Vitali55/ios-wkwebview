@@ -11,7 +11,7 @@ import Appodeal
 
 final class SetupService {
   
-  private var rechabilityObserver = ReachabilityHandler()
+  private var rechabilityObserver = NetworkingHandler()
   
   var isConnected: Bool {
     rechabilityObserver.hasConnection

@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Reachability
 
 final class NetworkingHandler {
   
-  private var reachability: Reachability? = Reachability()
+  private let reachability = try! Reachability()
   
   // MARK: - LifeCycle
   
@@ -21,24 +22,29 @@ final class NetworkingHandler {
   // MARK: - Public
   
   var hasConnection: Bool {
-    reachability?.connection != Reachability.Connection.none
+    reachability.connection != .unavailable
   }
   
   func startMonitoring() {
     stopMonitoring()
-    try? reachability?.startNotifier()
     
-//    reachability?.whenReachable = { _ in
-//      NotificationCenter.default.post(name: .whenReachable, object: nil)
-//    }
-//
-//    reachability?.whenUnreachable = { _ in
-//      NotificationCenter.default.post(name: .whenUnReachable, object: nil)
-//    }
+    do {
+      try reachability.startNotifier()
+    } catch{
+      print("could not start reachability notifier")
+    }
+    
+    reachability.whenReachable = { _ in
+      NotificationCenter.default.post(name: .whenReachable, object: nil)
+    }
+
+    reachability.whenUnreachable = { _ in
+      NotificationCenter.default.post(name: .whenUnReachable, object: nil)
+    }
   }
   
   func stopMonitoring() {
-    reachability?.stopNotifier()
+    reachability.stopNotifier()
   }
 }
 

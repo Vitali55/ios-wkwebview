@@ -13,5 +13,6 @@ target 'ios-web-client' do
   
   appodeal
   pod 'SwiftyStoreKit'
+  pod 'ReachabilitySwift'
 
 end

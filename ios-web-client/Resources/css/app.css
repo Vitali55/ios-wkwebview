@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.woff?xc6uej') format('woff');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wifi-off:before {
+  content: "\e900";
+}
+.icon-magic:before {
+  content: "\e901";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: arial, helvetica;
+  font-size: 5vw;
+  color: #c9c8e0;
+  text-shadow: 0 0 1vw rgba(0, 0, 0, 0.75);
+
+  background-color: #2e2e50;
+}
+.message {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-60%);
+}
+.message .title {
+  margin: 5vw 0 0 0;
+  font-size: 7vw;
+  font-weight: 600;
+  color: #ebeaff;
+  text-align:center;
+}
+
+.message .body {
+    margin: 4vw 0 10vw;
+    padding: 3vw 3vw 3vw 5vw;
+    background-color: #252540;
+}
+
+.message .icon {
+
+	font-size: 30vw;
+	text-align: center;
+}
+
+.message .btn {
+  display: block;
+  margin-top: 10vw; 
+  text-decoration: none;
+  color:#ebeaff;
+  padding: 4vw 4vw;
+  font-weight: 600;
+  border: 0.5vw solid #ebeaff;
+  text-align: center;
+  border-radius: 2vw;
+}
+
+.message .btn:hover {
+  background-color: #575784;
+}

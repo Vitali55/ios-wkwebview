@@ -41,6 +41,7 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.10)
+  - ReachabilitySwift (5.0.0)
   - SwiftyStoreKit (0.16.1)
   - YandexMobileMetrica (3.11.1):
     - YandexMobileMetrica/Static (= 3.11.1)
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - APDAppodealAdExchangeAdapter (= 2.6.5.1)
   - APDGoogleAdMobAdapter (= 2.6.5.2)
   - APDYandexAdapter (= 2.6.5.1)
+  - ReachabilitySwift
   - SwiftyStoreKit
 
 SPEC REPOS:
@@ -70,6 +72,7 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
+    - ReachabilitySwift
     - SwiftyStoreKit
     - YandexMobileMetrica
 
@@ -84,9 +87,10 @@ SPEC CHECKSUMS:
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   YandexMobileMetrica: e985e1f77e405390a2d13f11741d86ff2f00c4ce
 
-PODFILE CHECKSUM: d1a047dcd5027e514ac8c56b24333442e966e56d
+PODFILE CHECKSUM: 54323bd57715f2a19562d30f8338ea214be0adac
 
 COCOAPODS: 1.9.3

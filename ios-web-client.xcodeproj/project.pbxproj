@@ -14,9 +14,8 @@
 		303A1B1024EE7ABC007ED513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303A1B0E24EE7ABC007ED513 /* LaunchScreen.storyboard */; };
 		303A1B1A24EE7E6C007ED513 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B1924EE7E6C007ED513 /* API.swift */; };
 		303A1B1D24EEE92C007ED513 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B1C24EEE92C007ED513 /* UIViewController+Alert.swift */; };
-		303A1B2324EF0EAB007ED513 /* ReachabilityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B2224EF0EAB007ED513 /* ReachabilityHandler.swift */; };
+		303A1B2324EF0EAB007ED513 /* NetworkingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B2224EF0EAB007ED513 /* NetworkingHandler.swift */; };
 		303A1B2524EF0FD8007ED513 /* SetupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B2424EF0FD8007ED513 /* SetupService.swift */; };
-		303A1B2624EF16BB007ED513 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B2024EF0E86007ED513 /* Reachability.swift */; };
 		303A1B2F24EFDCB4007ED513 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B2E24EFDCB3007ED513 /* Purchase.swift */; };
 		303A1B3124EFDDA8007ED513 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3024EFDDA8007ED513 /* Typealias.swift */; };
 		303A1B3424F0175A007ED513 /* ADService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A1B3324F0175A007ED513 /* ADService.swift */; };
@@ -34,6 +33,7 @@
 		30CD8D3B24F4616A00F6F66A /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 30CD8D3724F4616A00F6F66A /* app.js */; };
 		30CD8D3C24F4616A00F6F66A /* disconnected.html in Resources */ = {isa = PBXBuildFile; fileRef = 30CD8D3924F4616A00F6F66A /* disconnected.html */; };
 		30CD8D3D24F4616A00F6F66A /* technical-work.html in Resources */ = {isa = PBXBuildFile; fileRef = 30CD8D3A24F4616A00F6F66A /* technical-work.html */; };
+		30D324AE250BAD33009CD314 /* app.css in Resources */ = {isa = PBXBuildFile; fileRef = 30D324AD250BAD33009CD314 /* app.css */; };
 		30EF8C5224F07FD200B565FE /* RewardedVideoAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF8C5124F07FD200B565FE /* RewardedVideoAD.swift */; };
 		30EF8C5524F0830E00B565FE /* BillingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF8C5424F0830E00B565FE /* BillingService.swift */; };
 		FBC0222D6652720AE8E8457A /* Pods_ios_web_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5757EA61F65B958D39AC1C8D /* Pods_ios_web_client.framework */; };
@@ -49,8 +49,7 @@
 		303A1B1124EE7ABC007ED513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		303A1B1924EE7E6C007ED513 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		303A1B1C24EEE92C007ED513 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
-		303A1B2024EF0E86007ED513 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		303A1B2224EF0EAB007ED513 /* ReachabilityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHandler.swift; sourceTree = "<group>"; };
+		303A1B2224EF0EAB007ED513 /* NetworkingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHandler.swift; sourceTree = "<group>"; };
 		303A1B2424EF0FD8007ED513 /* SetupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupService.swift; sourceTree = "<group>"; };
 		303A1B2E24EFDCB3007ED513 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		303A1B3024EFDDA8007ED513 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		30CD8D3724F4616A00F6F66A /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		30CD8D3924F4616A00F6F66A /* disconnected.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = disconnected.html; sourceTree = "<group>"; };
 		30CD8D3A24F4616A00F6F66A /* technical-work.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "technical-work.html"; sourceTree = "<group>"; };
+		30D324AD250BAD33009CD314 /* app.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = app.css; sourceTree = "<group>"; };
 		30EF8C5124F07FD200B565FE /* RewardedVideoAD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedVideoAD.swift; sourceTree = "<group>"; };
 		30EF8C5424F0830E00B565FE /* BillingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingService.swift; sourceTree = "<group>"; };
 		5757EA61F65B958D39AC1C8D /* Pods_ios_web_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_web_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +176,7 @@
 		303A1B1F24EF0E70007ED513 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				303A1B2024EF0E86007ED513 /* Reachability.swift */,
-				303A1B2224EF0EAB007ED513 /* ReachabilityHandler.swift */,
+				303A1B2224EF0EAB007ED513 /* NetworkingHandler.swift */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -220,6 +219,7 @@
 		30CD8D3524F4614C00F6F66A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30D324AC250BAD33009CD314 /* css */,
 				30CD8D3624F4616A00F6F66A /* js */,
 				30CD8D3824F4616A00F6F66A /* pages */,
 			);
@@ -251,6 +251,14 @@
 				303A1B0724EE7ABA007ED513 /* MainViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		30D324AC250BAD33009CD314 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				30D324AD250BAD33009CD314 /* app.css */,
+			);
+			path = css;
 			sourceTree = "<group>";
 		};
 		30EF8C4E24F0795900B565FE /* Appodeal */ = {
@@ -344,6 +352,7 @@
 			files = (
 				303A1B1024EE7ABC007ED513 /* LaunchScreen.storyboard in Resources */,
 				30CD8D3D24F4616A00F6F66A /* technical-work.html in Resources */,
+				30D324AE250BAD33009CD314 /* app.css in Resources */,
 				30CD8D3C24F4616A00F6F66A /* disconnected.html in Resources */,
 				303A1B0D24EE7ABC007ED513 /* Assets.xcassets in Resources */,
 				30CD8D3B24F4616A00F6F66A /* app.js in Resources */,
@@ -424,7 +433,7 @@
 				303A1B3624F017D2007ED513 /* InterstialAD.swift in Sources */,
 				303A1B3824F01B81007ED513 /* WebViewBridge.swift in Sources */,
 				30EF8C5224F07FD200B565FE /* RewardedVideoAD.swift in Sources */,
-				303A1B2324EF0EAB007ED513 /* ReachabilityHandler.swift in Sources */,
+				303A1B2324EF0EAB007ED513 /* NetworkingHandler.swift in Sources */,
 				303A1B0824EE7ABA007ED513 /* MainViewController.swift in Sources */,
 				30AF7FD624FCFA0F008BECA7 /* SKProduct+Extension.swift in Sources */,
 				303A1B0424EE7ABA007ED513 /* AppDelegate.swift in Sources */,
@@ -432,7 +441,6 @@
 				30AF7FD224F904D3008BECA7 /* BillingModel.swift in Sources */,
 				303A1B2F24EFDCB4007ED513 /* Purchase.swift in Sources */,
 				30CD8D3424F44F6300F6F66A /* CaseRoyaleWebBridge.swift in Sources */,
-				303A1B2624EF16BB007ED513 /* Reachability.swift in Sources */,
 				30CD8D3124F3DA5800F6F66A /* YandexMetricaAnalytics.swift in Sources */,
 				30EF8C5524F0830E00B565FE /* BillingService.swift in Sources */,
 				303A1B3124EFDDA8007ED513 /* Typealias.swift in Sources */,

@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationDidEnterBackground(_ application: UIApplication) {
-    setupService.removeNetworkHandler()
+    
   }
 
   func applicationWillEnterForeground(_ application: UIApplication) {
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationDidBecomeActive(_ application: UIApplication) {
-    setupService.setupNetworkHandler()
+
   }
 
   func applicationWillTerminate(_ application: UIApplication) {
