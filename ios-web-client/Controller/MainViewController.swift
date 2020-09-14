@@ -31,9 +31,9 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .black
-    webView.backgroundColor = .black
     webView.allowsLinkPreview = false
+    
+    webView.translatesAutoresizingMaskIntoConstraints = false
     
     bridge = CaseRoyaleWebBridge(webView: webView)
     
@@ -45,7 +45,12 @@ final class MainViewController: UIViewController {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
-    webView.frame = view.frame
+    NSLayoutConstraint.activate([
+      webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+      webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      webView.leftAnchor.constraint(equalTo: view.leftAnchor),
+      webView.rightAnchor.constraint(equalTo: view.rightAnchor)
+    ])
   }
   
   private func prepare() {
